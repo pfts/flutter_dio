@@ -56,8 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.green,
                   child: const Column(
                     children: [
-                      Text(
-                        "CONTADOR DE CLIQUES",
+                      Flexible(
+                        child: UserAccountsDrawerHeader(
+                          accountName: Text('Pablo Tertuliano'),
+                          accountEmail: Text('pabloftsilva@gmail.com'),
+                          currentAccountPicture: CircleAvatar(
+                              foregroundImage:
+                                  AssetImage("../lib/images/pablo.jpg")),
+                        ),
                       ),
                     ],
                   ),
@@ -69,10 +75,6 @@ class _MyHomePageState extends State<MyHomePage> {
             const ListTile(
               leading: Icon(Icons.card_travel),
               title: Text("About"),
-            ),
-            const ListTile(
-              leading: Icon(Icons.shopping_basket_sharp),
-              title: Text("Shopping"),
             ),
             const ListTile(
               leading: Icon(Icons.developer_board),
